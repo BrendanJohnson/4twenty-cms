@@ -517,11 +517,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="editable" id="r19_navigation-container">
+                        <div id="r19_navigation-container">
                             <div id="r19_navigation-content" class="container-fluid cf">
                                 <a id="r19_logo" href="/" title="4twenty"><img src="/media/4twenty/images/logo.png" alt="4twenty"></a>
                                 <nav id="r19_navigation">
                                     <ul>
+                                        {% for page in site.pages %}
+                                            <li><a href='/'>Page</a></li>
+                                        {% endfor %}
                                         <li><a href='/'>Home</a></li>
                                         <li><a href='/why-us'>WHY US?</a></li>
                                         <li><a href='/submit-resume'>Job Seekers</a>
