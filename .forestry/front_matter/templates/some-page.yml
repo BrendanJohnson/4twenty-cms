@@ -1,0 +1,8 @@
+---
+label: Some Page
+hide_body: false
+is_partial: false
+fields:
+- type: textarea
+  name: blah
+  label: Blah
