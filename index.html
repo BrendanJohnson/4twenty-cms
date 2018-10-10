@@ -1,0 +1,250 @@
+---
+layout: default
+---
+                  <div id="r19_home-banner-container" class="r19_banner">
+                        <div class="r19_slider">
+                            <!-- prev/next links -->
+                            <span class="cycle-prev"></span>
+                            <span class="cycle-next"></span>
+                            <div>
+                                <img src="/media/4twenty/images/banners/home-0.jpg" alt="4twenty">
+                                <div class="r19_home-banner-caption-container" id="r19_home-banner-caption-0">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-8 col-sm-offset-2 r19_home-banner-caption">
+                                                <h1>The very best sales talent in Australia.</h1>
+                                                <p>Drive your success with a recruitment consultancy with the honesty,
+                                                    <br> accuracy and processes to achieve your goals.</p>
+                                                <p><a href="/why-us" title="Read more">Read more &gt;&gt;</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="/media/4twenty/images/banners/home-1.jpg" alt="4twenty">
+                                <div class="r19_home-banner-caption-container" id="r19_home-banner-caption-1">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-8 col-sm-offset-2 r19_home-banner-caption">
+                                                <h2>From Account Executives to Chief Sales Officers.</h2>
+                                                <p>We particularly specialise in locating the up-and-coming sales stars that
+                                                    <br> show the potential to become your biggest assets in the future</p>
+                                                <p><a href="/advancedsearch.aspx?search=1" title="Read more">Read more &gt;&gt;</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="r19_home-banner-search-container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div id="r19_home-banner-search">
+                                    <div class="r19_search-field col-md-4 col-sm-6" id="r19_job-search-keywords">
+                                        <label for="keywords">Enter Keywords</label>
+                                        <input id='ja-keywords' type='text' class='form-textbox' placeholder='Keywords' />
+                                    </div>
+                                    <div class="r19_search-field col-md-4 col-sm-6" id="r19_job-search-location">
+                                        <label for="ja-locations">Location</label>
+                                        <div>
+                                            <select class='form-dropdown' id="ja-locations">
+                                                <option value="-1" SELECTED data-placeholdertag=''>- All Locations - </option>
+                                                <optgroup label="AUSTRALIA">
+                                                    <option value="651967" data-placeholdertag=''>New South Wales</option>
+                                                    <option value="651969" data-placeholdertag=''>Queensland</option>
+                                                    <option value="651968" data-placeholdertag=''>Victoria</option>
+                                            </select>
+                                        </div>
+                                        <script>
+                                        $('#locationID1').change(function() {
+
+                                            $('.divSalaryCurrency1').html($('#locationID1 option:selected').data('placeholdertag') + ' ');
+                                            var blnLocationSelected = ($('#locationID1 option:selected').val() > 0);
+
+                                            if ($('#hfCountryCount').val() != '1') {
+                                                $('#salaryID1').prop('disabled', blnLocationSelected);
+                                                $('#salarylowerband1').prop('disabled', blnLocationSelected);
+                                                $('#salaryupperband1').prop('disabled', blnLocationSelected);
+                                            } else {
+                                                $('#salaryID1').removeProp('disabled');
+                                                $('#salarylowerband1').removeProp('disabled');
+                                                $('#salaryupperband1').removeProp('disabled');
+                                            }
+
+                                            $('#divArea1').html("<img src='/images/loading.gif' alt='loading' />");
+                                            $('#divAreaDropDown1').html("<img src='/images/loading.gif' alt='loading' />");
+
+                                            var locationID = '';
+                                            $('#locationID1 option:selected').each(function() {
+                                                locationID += $(this).val();
+                                            });
+
+
+                                            $.ajax({
+                                                type: 'POST',
+                                                cache: false,
+                                                url: '/job/ajaxcalls/ajaxmethods.asmx/GetAreas',
+                                                data: "{'LocationId':" + locationID + ", IsDynamicWidget: '1'}",
+                                                contentType: "application/json; charset=utf-8",
+                                                dataType: "json",
+                                                success: function(msg) {
+                                                    // Replace the div's content with the page method's return.
+                                                    $("#divArea1").html(msg.d);
+                                                },
+                                                fail: function() {
+                                                    // Replace the div's content with the page method's return.
+                                                    $("#divArea1").html("It didn't work");
+                                                }
+                                            });
+
+                                            $.ajax({
+                                                type: 'POST',
+                                                cache: false,
+                                                url: '/job/ajaxcalls/ajaxmethods.asmx/GetAreasDropDown',
+                                                data: "{'LocationId':" + locationID + ", IsDynamicWidget: '1'}",
+                                                contentType: "application/json; charset=utf-8",
+                                                dataType: "json",
+                                                success: function(msg) {
+                                                    // Replace the div's content with the page method's return.
+                                                    $("#divAreaDropDown1").html(msg.d);
+                                                },
+                                                fail: function() {
+                                                    // Replace the div's content with the page method's return.
+                                                    $("#divAreaDropDown1").html("It didn't work");
+                                                }
+                                            });
+
+                                        });
+
+
+                                        $('#locationID1').change();
+                                        </script>
+                                    </div>
+                                    <div class="r19_search-field col-md-3 col-sm-6" id="r19_job-search-submit">
+                                        <a class="mini-new-buttons" href="javascript:void(0)" id="r19_search-link" onclick="WidgetJobSearch();" title="Search Job">Search Job</a></div>
+                                    <input id='hfCountryCount' type='hidden' value='3' />
+                                    <script src='/media/4twenty/js/widget.js'></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div id="r19_home-container" class="r19_background">
+                        <div id="r19_home-content" class="container-fluid">
+                            <div id="r19_home-call-to-action-container">
+                                <div class="row">
+                                    <div class="col-sm-4 r19_home-call-to-action-box">
+                                        <h2>
+                        <span class="r19_submit-resume"></span>
+                        Submit Resume
+                    </h2>
+                                        <p>Come one, come all! Join our
+                                            <br> extensive network of the very best
+                                            <br> Australian sales people and receive
+                                            <br> valuable career advice and market
+                                            <br> insights in return. </p>
+                                        <p class="r19_button"><a href="/submit-resume" title="Join Us">Join Us</a></p>
+                                    </div>
+                                    <div class="col-sm-4 r19_home-call-to-action-box">
+                                        <h2>
+                        <span class="r19_job-request"></span>
+                        Register a Vacancy
+                    </h2>
+                                        <p>We’re targeted, precise and
+                                            <br> consistent, meaning we tap directly
+                                            <br> into the job seeker market, identify
+                                            <br> and curate top talent for your
+                                            <br> selection. </p>
+                                        <p class="r19_button"><a href="/submit-vacancy" title="Try us">Try Us</a></p>
+                                    </div>
+                                    <div class="col-sm-4 r19_home-call-to-action-box">
+                                        <h2>
+                        <span class="r19_register"></span>
+                                                
+Job Search
+                    </h2>
+                                        <p>We make placements across the
+                                            <br> country, meaning you’ll find the
+                                            <br> best jobs in your area. Find your
+                                            <br> next career opportunity here!
+                                        </p>
+                                        <p class="r19_button"><a href="/advancedsearch.aspx?search=1" title="Search Job">Search Job</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-section">
+                        <div class="container-fluid">
+                            <h3>We know your time and resources are valuable.</h3>
+                            <p>Don’t waste your time using inefficient methods. We will help you lock in the right sales staff so you can get on with expanding business. Whatever sales roles you’re currently looking to fill, whether on a permanent, part time or casual basis, contact the team at 4Twenty to discuss your requirements.</p>
+                        </div>
+                    </div>
+                    <div id="r19_our-services-container" class="r19_background r19_alt-1">
+                        <div class="r19_our-services-background"></div>
+                        <div id="r19_our-services-content" class="container-fluid">
+                            <div class="row r19_our-services">
+                                <div class="col-sm-6 r19_our-services-box">
+                                    <figure><img src="/media/4twenty/images/image-1.svg" alt="4twenty"></figure>
+                                    <p>100% dedicated to Sales recruitment Quarterly seminars and partnerships with top universities for better qualified candidates.</p>
+                                    <p class="text-center"><a href="/why-us" class="mini-new-buttons" title="Learn More">Learn More</a></p>
+                                </div>
+                                <div class="col-sm-6 r19_our-services-box box-2">
+                                    <figure><img src="/media/4twenty/images/image-2.svg" alt="4twenty"></figure>
+                                    <p>Rigorous pre-screening to ensure the candidates you meet with really are suitable, and
+                                        <br>Greater choice for candidates leading to higher employment engagement.</p>
+                                    <p class="text-center"><a href="/employer" class="mini-new-buttons" title="Learn More">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div id="r19_home-latest-jobs-container" class="r19_background">
+                        <div id="r19_home-latest-jobs-content" class="container-fluid">
+                            <div id="r19_home-latest-jobs">
+                                <h2>Latest Jobs</h2>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+                                    <footer id="r19_footer-quote-container">
+                        <div id="r19_footer-quote-content" class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-12">
+                                    <h2>What <small>Clients have said</small></h2>
+                                </div>
+                                <div class="col-sm-8 col-xs-12">
+                                    <div id="r19_footer-quote" class="r19_testimonials">
+                                        <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+                                            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 77px;">
+                                                <!-- <ul data-url="/newsrss.aspx?category=testimonials" style="width: auto; position: relative; transition-duration: 0s; transform: translate3d(0px, -154px, 0px);"> -->
+                                                <ul style="width: auto; position: relative; transition-duration: 0s; transform: translate3d(0px, -154px, 0px);">
+                                                    <li style="float: none; list-style: none; position: relative; width: 750px;" class="bx-clone">
+                                                        <div class="rss-item" id="rss-item-3"><span class="rss-item-title"><a target="_blank" href="https://www.4twentyconsulting.com/news/sophia-sales-director/18621/">Sophia, Sales&nbsp;Director</a></span><span class="rss-item-description">No time wasted! I just have met really suitable&nbsp;candidates.</span></div>
+                                                    </li>
+                                                    <li style="float: none; list-style: none; position: relative; width: 750px;">
+                                                        <div class="rss-item" id="rss-item-0"><span class="rss-item-title"><a target="_blank" href="https://www.4twentyconsulting.com/news/sales-operations-verizon-company/21364/">Steve Cornwell, Sales Operations, Verizon&nbsp;Company</a></span><span class="rss-item-description">Hiring talent for my sales teams since 2015 and quickly became our most successful&nbsp;recruiter.</span></div>
+                                                    </li>
+                                                    <li style="float: none; list-style: none; position: relative; width: 750px;">
+                                                        <div class="rss-item" id="rss-item-1"><span class="rss-item-title"><a target="_blank" href="https://www.4twentyconsulting.com/news/matt-brand-success/21341/">Matt Sumner, Head of Brand Success, World&nbsp;manager</a></span><span class="rss-item-description">Very professional and takes pride in placing not just any candidate but the best fit for a&nbsp;culture.</span></div>
+                                                    </li>
+                                                    <li style="float: none; list-style: none; position: relative; width: 750px;">
+                                                        <div class="rss-item" id="rss-item-2"><span class="rss-item-title"><a target="_blank" href="https://www.4twentyconsulting.com/news/harry-senior-account-manager/18620/">Harry, Senior Account&nbsp;Manager</a></span><span class="rss-item-description">My Specialist used advanced marketing campaigns to target the job seekers I&nbsp;wanted.</span></div>
+                                                    </li>
+                                                    <li style="float: none; list-style: none; position: relative; width: 750px;">
+                                                        <div class="rss-item" id="rss-item-3"><span class="rss-item-title"><a target="_blank" href="https://www.4twentyconsulting.com/news/sophia-sales-director/18621/">Sophia, Sales&nbsp;Director</a></span><span class="rss-item-description">No time wasted! I just have met really suitable&nbsp;candidates.</span></div>
+                                                    </li>
+                                                    <li style="float: none; list-style: none; position: relative; width: 750px;" class="bx-clone">
+                                                        <div class="rss-item" id="rss-item-0"><span class="rss-item-title"><a target="_blank" href="https://www.4twentyconsulting.com/news/sales-operations-verizon-company/21364/">Steve Cornwell, Sales Operations, Verizon&nbsp;Company</a></span><span class="rss-item-description">Hiring talent for my sales teams since 2015 and quickly became our most successful&nbsp;recruiter.</span></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>

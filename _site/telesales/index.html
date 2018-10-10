@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html id="ctl00_htmlMaster" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "007a92eda0", "applicationID": "70150088", "transactionName": "YwFQMUACDRcCBkAIWFpLczZiTBMFBABHTkdVA1dLUxATHA==", "queueTime": 0, "applicationTime": 553, "agent": "", "atts": "" }
+    </script>
+    <script type="text/javascript">
+    (window.NREUM || (NREUM = {})).loader_config = { xpid: "VwMBUF5QGwQAVVRSBwkP" };
+    window.NREUM || (NREUM = {}), __nr_require = function(t, n, e) {
+        function r(e) { if (!n[e]) { var o = n[e] = { exports: {} };
+                t[e][0].call(o.exports, function(n) { var o = t[e][1][n]; return r(o || n) }, o, o.exports) } return n[e].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < e.length; o++) r(e[o]); return r }({ 1: [function(t, n, e) {
+            function r(t) { try { s.console && console.log(t) } catch (n) {} } var o, i = t("ee"),
+                a = t(15),
+                s = {}; try { o = localStorage.getItem("__nr_flags").split(","), console && "function" == typeof console.log && (s.console = !0, o.indexOf("dev") !== -1 && (s.dev = !0), o.indexOf("nr_dev") !== -1 && (s.nrDev = !0)) } catch (c) {} s.nrDev && i.on("internal-error", function(t) { r(t.stack) }), s.dev && i.on("fn-err", function(t, n, e) { r(e.stack) }), s.dev && (r("NR AGENT IN DEVELOPMENT MODE"), r("flags: " + a(s, function(t, n) { return t }).join(", "))) }, {}], 2: [function(t, n, e) {
+            function r(t, n, e, r, s) { try { p ? p -= 1 : o(s || new UncaughtException(t, n, e), !0) } catch (f) { try { i("ierr", [f, c.now(), !0]) } catch (d) {} } return "function" == typeof u && u.apply(this, a(arguments)) }
+
+            function UncaughtException(t, n, e) { this.message = t || "Uncaught error with no additional information", this.sourceURL = n, this.line = e }
+
+            function o(t, n) { var e = n ? null : c.now();
+                i("err", [t, e]) } var i = t("handle"),
+                a = t(16),
+                s = t("ee"),
+                c = t("loader"),
+                f = t("gos"),
+                u = window.onerror,
+                d = !1,
+                l = "nr@seenError",
+                p = 0;
+            c.features.err = !0, t(1), window.onerror = r; try { throw new Error } catch (h) { "stack" in h && (t(8), t(7), "addEventListener" in window && t(5), c.xhrWrappable && t(9), d = !0) } s.on("fn-start", function(t, n, e) { d && (p += 1) }), s.on("fn-err", function(t, n, e) { d && !e[l] && (f(e, l, function() { return !0 }), this.thrown = !0, o(e)) }), s.on("fn-end", function() { d && !this.thrown && p > 0 && (p -= 1) }), s.on("internal-error", function(t) { i("ierr", [t, c.now(), !0]) }) }, {}], 3: [function(t, n, e) { t("loader").features.ins = !0 }, {}], 4: [function(t, n, e) {
+            function r(t) {} if (window.performance && window.performance.timing && window.performance.getEntriesByType) { var o = t("ee"),
+                    i = t("handle"),
+                    a = t(8),
+                    s = t(7),
+                    c = "learResourceTimings",
+                    f = "addEventListener",
+                    u = "resourcetimingbufferfull",
+                    d = "bstResource",
+                    l = "resource",
+                    p = "-start",
+                    h = "-end",
+                    m = "fn" + p,
+                    w = "fn" + h,
+                    v = "bstTimer",
+                    y = "pushState",
+                    g = t("loader");
+                g.features.stn = !0, t(6); var b = NREUM.o.EV;
+                o.on(m, function(t, n) { var e = t[0];
+                    e instanceof b && (this.bstStart = g.now()) }), o.on(w, function(t, n) { var e = t[0];
+                    e instanceof b && i("bst", [e, n, this.bstStart, g.now()]) }), a.on(m, function(t, n, e) { this.bstStart = g.now(), this.bstType = e }), a.on(w, function(t, n) { i(v, [n, this.bstStart, g.now(), this.bstType]) }), s.on(m, function() { this.bstStart = g.now() }), s.on(w, function(t, n) { i(v, [n, this.bstStart, g.now(), "requestAnimationFrame"]) }), o.on(y + p, function(t) { this.time = g.now(), this.startPath = location.pathname + location.hash }), o.on(y + h, function(t) { i("bstHist", [location.pathname + location.hash, this.startPath, this.time]) }), f in window.performance && (window.performance["c" + c] ? window.performance[f](u, function(t) { i(d, [window.performance.getEntriesByType(l)]), window.performance["c" + c]() }, !1) : window.performance[f]("webkit" + u, function(t) { i(d, [window.performance.getEntriesByType(l)]), window.performance["webkitC" + c]() }, !1)), document[f]("scroll", r, { passive: !0 }), document[f]("keypress", r, !1), document[f]("click", r, !1) } }, {}], 5: [function(t, n, e) {
+            function r(t) { for (var n = t; n && !n.hasOwnProperty(u);) n = Object.getPrototypeOf(n);
+                n && o(n) }
+
+            function o(t) { s.inPlace(t, [u, d], "-", i) }
+
+            function i(t, n) { return t[1] } var a = t("ee").get("events"),
+                s = t(18)(a, !0),
+                c = t("gos"),
+                f = XMLHttpRequest,
+                u = "addEventListener",
+                d = "removeEventListener";
+            n.exports = a, "getPrototypeOf" in Object ? (r(document), r(window), r(f.prototype)) : f.prototype.hasOwnProperty(u) && (o(window), o(f.prototype)), a.on(u + "-start", function(t, n) { var e = t[1],
+                    r = c(e, "nr@wrapped", function() {
+                        function t() { if ("function" == typeof e.handleEvent) return e.handleEvent.apply(e, arguments) } var n = { object: t, "function": e }[typeof e]; return n ? s(n, "fn-", null, n.name || "anonymous") : e });
+                this.wrapped = t[1] = r }), a.on(d + "-start", function(t) { t[1] = this.wrapped || t[1] }) }, {}], 6: [function(t, n, e) { var r = t("ee").get("history"),
+                o = t(18)(r);
+            n.exports = r, o.inPlace(window.history, ["pushState", "replaceState"], "-") }, {}], 7: [function(t, n, e) { var r = t("ee").get("raf"),
+                o = t(18)(r),
+                i = "equestAnimationFrame";
+            n.exports = r, o.inPlace(window, ["r" + i, "mozR" + i, "webkitR" + i, "msR" + i], "raf-"), r.on("raf-start", function(t) { t[0] = o(t[0], "fn-") }) }, {}], 8: [function(t, n, e) {
+            function r(t, n, e) { t[0] = a(t[0], "fn-", null, e) }
+
+            function o(t, n, e) { this.method = e, this.timerDuration = isNaN(t[1]) ? 0 : +t[1], t[0] = a(t[0], "fn-", this, e) } var i = t("ee").get("timer"),
+                a = t(18)(i),
+                s = "setTimeout",
+                c = "setInterval",
+                f = "clearTimeout",
+                u = "-start",
+                d = "-";
+            n.exports = i, a.inPlace(window, [s, "setImmediate"], s + d), a.inPlace(window, [c], c + d), a.inPlace(window, [f, "clearImmediate"], f + d), i.on(c + u, r), i.on(s + u, o) }, {}], 9: [function(t, n, e) {
+            function r(t, n) { d.inPlace(n, ["onreadystatechange"], "fn-", s) }
+
+            function o() { var t = this,
+                    n = u.context(t);
+                t.readyState > 3 && !n.resolved && (n.resolved = !0, u.emit("xhr-resolved", [], t)), d.inPlace(t, y, "fn-", s) }
+
+            function i(t) { g.push(t), h && (x ? x.then(a) : w ? w(a) : (E = -E, O.data = E)) }
+
+            function a() { for (var t = 0; t < g.length; t++) r([], g[t]);
+                g.length && (g = []) }
+
+            function s(t, n) { return n }
+
+            function c(t, n) { for (var e in t) n[e] = t[e]; return n } t(5); var f = t("ee"),
+                u = f.get("xhr"),
+                d = t(18)(u),
+                l = NREUM.o,
+                p = l.XHR,
+                h = l.MO,
+                m = l.PR,
+                w = l.SI,
+                v = "readystatechange",
+                y = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"],
+                g = [];
+            n.exports = u; var b = window.XMLHttpRequest = function(t) { var n = new p(t); try { u.emit("new-xhr", [n], n), n.addEventListener(v, o, !1) } catch (e) { try { u.emit("internal-error", [e]) } catch (r) {} } return n }; if (c(p, b), b.prototype = p.prototype, d.inPlace(b.prototype, ["open", "send"], "-xhr-", s), u.on("send-xhr-start", function(t, n) { r(t, n), i(n) }), u.on("open-xhr-start", r), h) { var x = m && m.resolve(); if (!w && !m) { var E = 1,
+                        O = document.createTextNode(E);
+                    new h(a).observe(O, { characterData: !0 }) } } else f.on("fn-end", function(t) { t[0] && t[0].type === v || a() }) }, {}], 10: [function(t, n, e) {
+            function r(t) { var n = this.params,
+                    e = this.metrics; if (!this.ended) { this.ended = !0; for (var r = 0; r < d; r++) t.removeEventListener(u[r], this.listener, !1); if (!n.aborted) { if (e.duration = a.now() - this.startTime, 4 === t.readyState) { n.status = t.status; var i = o(t, this.lastSize); if (i && (e.rxSize = i), this.sameOrigin) { var c = t.getResponseHeader("X-NewRelic-App-Data");
+                                c && (n.cat = c.split(", ").pop()) } } else n.status = 0;
+                        e.cbTime = this.cbTime, f.emit("xhr-done", [t], t), s("xhr", [n, e, this.startTime]) } } }
+
+            function o(t, n) { var e = t.responseType; if ("json" === e && null !== n) return n; var r = "arraybuffer" === e || "blob" === e || "json" === e ? t.response : t.responseText; return h(r) }
+
+            function i(t, n) { var e = c(n),
+                    r = t.params;
+                r.host = e.hostname + ":" + e.port, r.pathname = e.pathname, t.sameOrigin = e.sameOrigin } var a = t("loader"); if (a.xhrWrappable) { var s = t("handle"),
+                    c = t(11),
+                    f = t("ee"),
+                    u = ["load", "error", "abort", "timeout"],
+                    d = u.length,
+                    l = t("id"),
+                    p = t(14),
+                    h = t(13),
+                    m = window.XMLHttpRequest;
+                a.features.xhr = !0, t(9), f.on("new-xhr", function(t) { var n = this;
+                    n.totalCbs = 0, n.called = 0, n.cbTime = 0, n.end = r, n.ended = !1, n.xhrGuids = {}, n.lastSize = null, p && (p > 34 || p < 10) || window.opera || t.addEventListener("progress", function(t) { n.lastSize = t.loaded }, !1) }), f.on("open-xhr-start", function(t) { this.params = { method: t[0] }, i(this, t[1]), this.metrics = {} }), f.on("open-xhr-end", function(t, n) { "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && n.setRequestHeader("X-NewRelic-ID", NREUM.loader_config.xpid) }), f.on("send-xhr-start", function(t, n) { var e = this.metrics,
+                        r = t[0],
+                        o = this; if (e && r) { var i = h(r);
+                        i && (e.txSize = i) } this.startTime = a.now(), this.listener = function(t) { try { "abort" === t.type && (o.params.aborted = !0), ("load" !== t.type || o.called === o.totalCbs && (o.onloadCalled || "function" != typeof n.onload)) && o.end(n) } catch (e) { try { f.emit("internal-error", [e]) } catch (r) {} } }; for (var s = 0; s < d; s++) n.addEventListener(u[s], this.listener, !1) }), f.on("xhr-cb-time", function(t, n, e) { this.cbTime += t, n ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs || !this.onloadCalled && "function" == typeof e.onload || this.end(e) }), f.on("xhr-load-added", function(t, n) { var e = "" + l(t) + !!n;
+                    this.xhrGuids && !this.xhrGuids[e] && (this.xhrGuids[e] = !0, this.totalCbs += 1) }), f.on("xhr-load-removed", function(t, n) { var e = "" + l(t) + !!n;
+                    this.xhrGuids && this.xhrGuids[e] && (delete this.xhrGuids[e], this.totalCbs -= 1) }), f.on("addEventListener-end", function(t, n) { n instanceof m && "load" === t[0] && f.emit("xhr-load-added", [t[1], t[2]], n) }), f.on("removeEventListener-end", function(t, n) { n instanceof m && "load" === t[0] && f.emit("xhr-load-removed", [t[1], t[2]], n) }), f.on("fn-start", function(t, n, e) { n instanceof m && ("onload" === e && (this.onload = !0), ("load" === (t[0] && t[0].type) || this.onload) && (this.xhrCbStart = a.now())) }), f.on("fn-end", function(t, n) { this.xhrCbStart && f.emit("xhr-cb-time", [a.now() - this.xhrCbStart, this.onload, n], n) }) } }, {}], 11: [function(t, n, e) { n.exports = function(t) { var n = document.createElement("a"),
+                    e = window.location,
+                    r = {};
+                n.href = t, r.port = n.port; var o = n.href.split("://");!r.port && o[1] && (r.port = o[1].split("/")[0].split("@").pop().split(":")[1]), r.port && "0" !== r.port || (r.port = "https" === o[0] ? "443" : "80"), r.hostname = n.hostname || e.hostname, r.pathname = n.pathname, r.protocol = o[0], "/" !== r.pathname.charAt(0) && (r.pathname = "/" + r.pathname); var i = !n.protocol || ":" === n.protocol || n.protocol === e.protocol,
+                    a = n.hostname === document.domain && n.port === e.port; return r.sameOrigin = i && (!n.hostname || a), r } }, {}], 12: [function(t, n, e) {
+            function r() {}
+
+            function o(t, n, e) { return function() { return i(t, [f.now()].concat(s(arguments)), n ? null : this, e), n ? void 0 : this } } var i = t("handle"),
+                a = t(15),
+                s = t(16),
+                c = t("ee").get("tracer"),
+                f = t("loader"),
+                u = NREUM; "undefined" == typeof window.newrelic && (newrelic = u); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                l = "api-",
+                p = l + "ixn-";
+            a(d, function(t, n) { u[n] = o(l + n, !0, "api") }), u.addPageAction = o(l + "addPageAction", !0), u.setCurrentRouteName = o(l + "routeName", !0), n.exports = newrelic, u.interaction = function() { return (new r).get() }; var h = r.prototype = { createTracer: function(t, n) { var e = {},
+                        r = this,
+                        o = "function" == typeof n; return i(p + "tracer", [f.now(), t, e], r),
+                        function() { if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], e), o) try { return n.apply(this, arguments) } catch (t) { throw c.emit("fn-err", [arguments, this, t], e), t } finally { c.emit("fn-end", [f.now()], e) } } } };
+            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(t, n) { h[n] = o(p + n) }), newrelic.noticeError = function(t) { "string" == typeof t && (t = new Error(t)), i("err", [t, f.now()]) } }, {}], 13: [function(t, n, e) { n.exports = function(t) { if ("string" == typeof t && t.length) return t.length; if ("object" == typeof t) { if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength; if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size; if (!("undefined" != typeof FormData && t instanceof FormData)) try { return JSON.stringify(t).length } catch (n) { return } } } }, {}], 14: [function(t, n, e) { var r = 0,
+                o = navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);
+            o && (r = +o[1]), n.exports = r }, {}], 15: [function(t, n, e) {
+            function r(t, n) { var e = [],
+                    r = "",
+                    i = 0; for (r in t) o.call(t, r) && (e[i] = n(r, t[r]), i += 1); return e } var o = Object.prototype.hasOwnProperty;
+            n.exports = r }, {}], 16: [function(t, n, e) {
+            function r(t, n, e) { n || (n = 0), "undefined" == typeof e && (e = t ? t.length : 0); for (var r = -1, o = e - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = t[n + r]; return i } n.exports = r }, {}], 17: [function(t, n, e) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], 18: [function(t, n, e) {
+            function r(t) { return !(t && t instanceof Function && t.apply && !t[a]) } var o = t("ee"),
+                i = t(16),
+                a = "nr@original",
+                s = Object.prototype.hasOwnProperty,
+                c = !1;
+            n.exports = function(t, n) {
+                function e(t, n, e, o) {
+                    function nrWrapper() { var r, a, s, c; try { a = this, r = i(arguments), s = "function" == typeof e ? e(r, a) : e || {} } catch (f) { l([f, "", [r, a, o], s]) } u(n + "start", [r, a, o], s); try { return c = t.apply(a, r) } catch (d) { throw u(n + "err", [r, a, d], s), d } finally { u(n + "end", [r, a, c], s) } } return r(t) ? t : (n || (n = ""), nrWrapper[a] = t, d(t, nrWrapper), nrWrapper) }
+
+                function f(t, n, o, i) { o || (o = ""); var a, s, c, f = "-" === o.charAt(0); for (c = 0; c < n.length; c++) s = n[c], a = t[s], r(a) || (t[s] = e(a, f ? s + o : o, i, s)) }
+
+                function u(e, r, o) { if (!c || n) { var i = c;
+                        c = !0; try { t.emit(e, r, o, n) } catch (a) { l([a, e, r, o]) } c = i } }
+
+                function d(t, n) { if (Object.defineProperty && Object.keys) try { var e = Object.keys(t); return e.forEach(function(e) { Object.defineProperty(n, e, { get: function() { return t[e] }, set: function(n) { return t[e] = n, n } }) }), n } catch (r) { l([r]) }
+                    for (var o in t) s.call(t, o) && (n[o] = t[o]); return n }
+
+                function l(n) { try { t.emit("internal-error", n) } catch (e) {} } return t || (t = o), e.inPlace = f, e.flag = a, e } }, {}], ee: [function(t, n, e) {
+            function r() {}
+
+            function o(t) {
+                function n(t) { return t && t instanceof r ? t : t ? c(t, s, i) : i() }
+
+                function e(e, r, o, i) { if (!l.aborted || i) { t && t(e, r, o); for (var a = n(o), s = h(e), c = s.length, f = 0; f < c; f++) s[f].apply(a, r); var d = u[y[e]]; return d && d.push([g, e, r, a]), a } }
+
+                function p(t, n) { v[t] = h(t).concat(n) }
+
+                function h(t) { return v[t] || [] }
+
+                function m(t) { return d[t] = d[t] || o(e) }
+
+                function w(t, n) { f(t, function(t, e) { n = n || "feature", y[e] = n, n in u || (u[n] = []) }) } var v = {},
+                    y = {},
+                    g = { on: p, emit: e, get: m, listeners: h, context: n, buffer: w, abort: a, aborted: !1 }; return g }
+
+            function i() { return new r }
+
+            function a() {
+                (u.api || u.feature) && (l.aborted = !0, u = l.backlog = {}) } var s = "nr@context",
+                c = t("gos"),
+                f = t(15),
+                u = {},
+                d = {},
+                l = n.exports = o();
+            l.backlog = u }, {}], gos: [function(t, n, e) {
+            function r(t, n, e) { if (o.call(t, n)) return t[n]; var r = e(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, n, { value: r, writable: !0, enumerable: !1 }), r } catch (i) {}
+                return t[n] = r, r } var o = Object.prototype.hasOwnProperty;
+            n.exports = r }, {}], handle: [function(t, n, e) {
+            function r(t, n, e, r) { o.buffer([t], r), o.emit(t, n, e) } var o = t("ee").get("handle");
+            n.exports = r, r.ee = o }, {}], id: [function(t, n, e) {
+            function r(t) { var n = typeof t; return !t || "object" !== n && "function" !== n ? -1 : t === window ? 0 : a(t, i, function() { return o++ }) } var o = 1,
+                i = "nr@id",
+                a = t("gos");
+            n.exports = r }, {}], loader: [function(t, n, e) {
+            function r() { if (!x++) { var t = b.info = NREUM.info,
+                        n = l.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && n)) return u.abort();
+                    f(y, function(n, e) { t[n] || (t[n] = e) }), c("mark", ["onload", a() + b.offset], null, "api"); var e = l.createElement("script");
+                    e.src = "https://" + t.agent, n.parentNode.insertBefore(e, n) } }
+
+            function o() { "complete" === l.readyState && i() }
+
+            function i() { c("mark", ["domContent", a() + b.offset], null, "api") }
+
+            function a() { return E.exists && performance.now ? Math.round(performance.now()) : (s = Math.max((new Date).getTime(), s)) - b.offset } var s = (new Date).getTime(),
+                c = t("handle"),
+                f = t(15),
+                u = t("ee"),
+                d = window,
+                l = d.document,
+                p = "addEventListener",
+                h = "attachEvent",
+                m = d.XMLHttpRequest,
+                w = m && m.prototype;
+            NREUM.o = { ST: setTimeout, SI: d.setImmediate, CT: clearTimeout, XHR: m, REQ: d.Request, EV: d.Event, PR: d.Promise, MO: d.MutationObserver }; var v = "" + location,
+                y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1071.min.js" },
+                g = m && w && w[p] && !/CriOS/.test(navigator.userAgent),
+                b = n.exports = { offset: s, now: a, origin: v, features: {}, xhrWrappable: g };
+            t(12), l[p] ? (l[p]("DOMContentLoaded", i, !1), d[p]("load", r, !1)) : (l[h]("onreadystatechange", o), d[h]("onload", r)), c("mark", ["firstbyte", s], null, "api"); var x = 0,
+                E = t(17) }, {}] }, {}, ["loader", 2, 10, 4, 3]);
+    </script>
+    <link rel="stylesheet" type="text/css" href="/media/COMMON/css/GlobalStyle.css" />
+    <link rel="stylesheet" href="/fonts/font-awesome/font-awesome.min.css" />
+    <script src="/media/COMMON/js/jquery.js"></script>
+    <script src="/media/COMMON/js/jxtscript.js"></script>
+    <script src="//maps.google.com/maps/api/js?sensor=false&v=3.exp&signed_in=true&libraries=places,geometry"></script>
+    <script>
+    window.onerror = function() { $("#loading-screen, .loader, #jxt-loading-screen").hide(); }
+    </script>
+    <meta name="description" content="Efficient and accurate telesales recruitment and jobs across Australia with 4Twenty. Read More" />
+    <meta name="keywords" content="telesales" />
+    <meta property="og:description" content="Efficient and accurate telesales recruitment and jobs across Australia with 4Twenty. Read More" />
+    <meta name="og:keywords" content="telesales">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.4twentyconsulting.com/telesales">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta property="image" content="/media/4twenty/images/logo-og.png" />
+    <meta name="msvalidate.01" content="BACBF8B54575E49109D3B04FFF407750" />
+    <link href="//www.4twentyconsulting.com/http_fontsgoogleapiscom/css?family=Fira+Sans%7COpen+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="114x114" href="/media/4twenty/images/apple-icon-114x114.png" />
+    <link rel="image_src" href="/media/4twenty/images/logo-og.png" />
+    <link rel="shortcut icon" href="/media/4twenty/images/favicon.ico" />
+    <link rel="stylesheet" href="/media/4twenty/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/media/4twenty/css/style.css?v3" />
+    <link rel="stylesheet" href="/media/4twenty/css/system-responsive-2.css" />
+    <!--[if lt IE 9]>
+<script src="/media/COMMON/js/html5shiv.js" type="text/javascript"></script>
+<![endif]-->
+    <script src='/scripts/JXTWidget.js'></script>
+    <script src='/media/COMMON/js/include-feed-3.0.js'></script>
+    <script src='/media/COMMON/js/jquery.jcarousel.min.js'></script>
+    <script src='/media/COMMON/js/cycle-2.js'></script>
+    <script src='/media/COMMON/js/responsive-plugins-0.js'></script>
+    <script src='/media/4twenty/js/bootstrap.min.js'></script>
+    <script src='/media/4twenty/js/jquery.bxslider.min.js'></script>
+    <script src='/media/4twenty/js/myjs.js?v=1.1'></script>
+    <link rel="stylesheet" href="/media/COMMON/iealert/iealert-2.css" />
+    <script type="text/javascript" src="/media/COMMON/iealert/iealert-2.js"></script>
+    <meta name="google-site-verification" content="TuW1_HaLrohTNPf4mEbU3YGdCsPAp0G_ldKCBVNX5Ow" />
+    <script>
+    $(function() {
+        $("#jxt-loading-screen").hide();
+    });
+    </script>
+    <link rel="canonical" href="/telesales" />
+    <meta property="og:title" content="Telesales | 4Twenty | 4Twenty" />
+    <title>
+        Telesales | 4Twenty | 4Twenty
+    </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+    <div id="jxt-loading-screen" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 999999; background: #fff;"></div>
+    <form name="aspnetForm" method="post" action="/telesales" id="aspnetForm">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIwMzE5NDkwMg9kFgJmD2QWBGYPFgIeBFRleHQFDzwhRE9DVFlQRSBodG1sPmQCAg8WBB4IeG1sOmxhbmcFAmVuHgRsYW5nBQJlbhYEAgEPZBYMAgEPFgIfAAVFPG1ldGEgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgiIC8+ZAIDDxYCHwAFSDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2ZvbnRzL2ZvbnQtYXdlc29tZS9mb250LWF3ZXNvbWUubWluLmNzcyIvPmQCBQ8WAh8ABTI8c2NyaXB0IHNyYz0iL21lZGlhL0NPTU1PTi9qcy9qcXVlcnkuanMiPjwvc2NyaXB0PmQCBw8WAh8ABXM8c2NyaXB0IHNyYz0iLy9tYXBzLmdvb2dsZS5jb20vbWFwcy9hcGkvanM/c2Vuc29yPWZhbHNlJnY9My5leHAmc2lnbmVkX2luPXRydWUmbGlicmFyaWVzPXBsYWNlcyxnZW9tZXRyeSI+PC9zY3JpcHQ+ZAIJD2QWBAIBDxYCHwAFhBINCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iRWZmaWNpZW50IGFuZCBhY2N1cmF0ZSB0ZWxlc2FsZXMgcmVjcnVpdG1lbnQgYW5kIGpvYnMgYWNyb3NzIEF1c3RyYWxpYSB3aXRoIDRUd2VudHkuIFJlYWQgTW9yZSIgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bWV0YSBuYW1lPSJrZXl3b3JkcyIgY29udGVudD0idGVsZXNhbGVzIiAvPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxtZXRhIHByb3BlcnR5PSJvZzpkZXNjcmlwdGlvbiIgY29udGVudD0iRWZmaWNpZW50IGFuZCBhY2N1cmF0ZSB0ZWxlc2FsZXMgcmVjcnVpdG1lbnQgYW5kIGpvYnMgYWNyb3NzIEF1c3RyYWxpYSB3aXRoIDRUd2VudHkuIFJlYWQgTW9yZSIgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bWV0YSBuYW1lPSJvZzprZXl3b3JkcyIgY29udGVudD0idGVsZXNhbGVzIj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dHlwZSIgY29udGVudD0id2Vic2l0ZSIgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwczovL3d3dy40dHdlbnR5Y29uc3VsdGluZy5jb20vdGVsZXNhbGVzIj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEsIG1pbmltdW0tc2NhbGU9MSwgbWF4aW11bS1zY2FsZT0xIiAvPg0KPG1ldGEgcHJvcGVydHk9ImltYWdlIiBjb250ZW50PSIvbWVkaWEvNHR3ZW50eS9pbWFnZXMvbG9nby1vZy5wbmciIC8+DQo8bWV0YSBuYW1lPSJtc3ZhbGlkYXRlLjAxIiBjb250ZW50PSJCQUNCRjhCNTQ1NzVFNDkxMDlEM0IwNEZGRjQwNzc1MCIgLz4NCg0KPGxpbmsgaHJlZj0iLy9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PUZpcmErU2FucyU3Q09wZW4rU2FuczozMDAsNDAwLDYwMCw3MDAiIHJlbD0ic3R5bGVzaGVldCI+DQo8bGluayByZWw9ImFwcGxlLXRvdWNoLWljb24iIHNpemVzPSIxMTR4MTE0IiBocmVmPSIvbWVkaWEvNHR3ZW50eS9pbWFnZXMvYXBwbGUtaWNvbi0xMTR4MTE0LnBuZyIgLz4NCjxsaW5rIHJlbD0iaW1hZ2Vfc3JjIiBocmVmPSIvbWVkaWEvNHR3ZW50eS9pbWFnZXMvbG9nby1vZy5wbmciIC8+DQo8bGluayByZWw9InNob3J0Y3V0IGljb24iIGhyZWY9Ii9tZWRpYS80dHdlbnR5L2ltYWdlcy9mYXZpY29uLmljbyIgLz4NCjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL21lZGlhLzR0d2VudHkvY3NzL2Jvb3RzdHJhcC5taW4uY3NzIiAvPg0KDQo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9tZWRpYS80dHdlbnR5L2Nzcy9zdHlsZS5jc3M/djMiIC8+DQo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9tZWRpYS80dHdlbnR5L2Nzcy9zeXN0ZW0tcmVzcG9uc2l2ZS0yLmNzcyIgLz4NCg0KPCEtLVtpZiBsdCBJRSA5XT4NCjxzY3JpcHQgc3JjPSIvbWVkaWEvQ09NTU9OL2pzL2h0bWw1c2hpdi5qcyIgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjwhW2VuZGlmXS0tPg0KPHNjcmlwdCBzcmM9Jy9zY3JpcHRzL0pYVFdpZGdldC5qcyc+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0nL21lZGlhL0NPTU1PTi9qcy9pbmNsdWRlLWZlZWQtMy4wLmpzJz48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPScvbWVkaWEvQ09NTU9OL2pzL2pxdWVyeS5qY2Fyb3VzZWwubWluLmpzJz48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPScvbWVkaWEvQ09NTU9OL2pzL2N5Y2xlLTIuanMnPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Jy9tZWRpYS9DT01NT04vanMvcmVzcG9uc2l2ZS1wbHVnaW5zLTAuanMnPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Jy9tZWRpYS80dHdlbnR5L2pzL2Jvb3RzdHJhcC5taW4uanMnPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Jy9tZWRpYS80dHdlbnR5L2pzL2pxdWVyeS5ieHNsaWRlci5taW4uanMnPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Jy9tZWRpYS80dHdlbnR5L2pzL215anMuanM/dj0xLjEnPjwvc2NyaXB0Pg0KDQo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9tZWRpYS9DT01NT04vaWVhbGVydC9pZWFsZXJ0LTIuY3NzIiAvPg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iL21lZGlhL0NPTU1PTi9pZWFsZXJ0L2llYWxlcnQtMi5qcyI+PC9zY3JpcHQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZAIDDxYCHwBlZAIKDxYCHwAFXjxtZXRhIG5hbWU9Imdvb2dsZS1zaXRlLXZlcmlmaWNhdGlvbiIgY29udGVudD0iVHVXMV9IYUxyb2hUTlBmNG1FYlUzWUdkQ3NQQXAwR19sZEtDQlZOWDVPdyIgLz5kAgUPFgIeBmFjdGlvbgUKL3RlbGVzYWxlcxYEAgEPZBYMAgEPFgIfAGVkAgMPZBYEAgEPZBYCAgEPEA8WAh4HVmlzaWJsZWhkZBYAZAICDxYCHwAFlhU8YSBocmVmPSIiIGlkPSJza2lwLWxpbmsiPlNraXAgdG8gY29udGVudDwvYT4NCjxoZWFkZXIgaWQ9InIxOV9oZWFkZXItY29udGFpbmVyIj4NCgk8ZGl2IGlkPSJyMTlfdG9wLWJhci1jb250YWluZXIiPg0KCQk8ZGl2IGlkPSJyMTlfdG9wLWJhci1jb250ZW50IiBjbGFzcz0iY29udGFpbmVyLWZsdWlkIj4NCgkJCTxkaXYgaWQ9InIxOV90b3AtYmFyIj4NCgkJCQk8ZGl2IGlkPSJyMTlfbG9naW4tcmVnaXN0ZXIiPg0KCQkJCQk8YSBocmVmPScvbWVtYmVyL2xvZ2luLmFzcHgnIGNsYXNzPSd1c2VyLWxvZ2dlZE91dCc+TG9naW48L2E+IHwgDQoNCgkJCQkJPGEgaHJlZj0iL21lbWJlci9yZWdpc3Rlci5hc3B4Ij5SZWdpc3RlcjwvYT4NCgkJCQkJPGEgaHJlZj0idGVsOjEzMDA5MzU0MzMiIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0iUGhvbmUiPjxpIGNsYXNzPSJmYSBmYS1waG9uZSI+PC9pPiA8c3Bhbj4xMzAwIDkzNSA0MzM8L3NwYW4+PC9hPg0KCQkJCTwvZGl2Pg0KCQkJCTxkaXYgY2xhc3M9InIxOV9zb2NpYWwtbWVkaWEiPjwhLS0NCgkJCQkJPGEgaHJlZj0iaHR0cHM6Ly90d2l0dGVyLmNvbS9qeHRjb25zdWx0aW5nIiB0YXJnZXQ9Il9ibGFuayIgY2xhc3M9InIxOV90d2l0dGVyIiB0aXRsZT0idHdpdHRlciI+PGkgY2xhc3M9ImZhIGZhLXR3aXR0ZXIiPjwvaT48c3Bhbj5Ud2l0dGVyPC9zcGFuPjwvYT4NCgkJCQkJPGEgaHJlZj0iaHR0cHM6Ly9pbnN0YWdyYW0uY29tL2p4dGNvbnN1bHRpbmciIHRhcmdldD0iX2JsYW5rIiBjbGFzcz0icjE5X2luc3RhZ3JhbSIgdGl0bGU9Imluc3RhZ3JhbSI+PGkgY2xhc3M9ImZhIGZhLWluc3RhZ3JhbSI+PC9pPjxzcGFuPkluc3RhZ3JhbTwvc3Bhbj48L2E+DQoJCQkJCTxhIGhyZWY9Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9qeHRjb25zdWx0aW5nIiB0YXJnZXQ9Il9ibGFuayIgY2xhc3M9InIxOV9mYWNlYm9vayIgdGl0bGU9ImZhY2Vib29rIj48aSBjbGFzcz0iZmEgZmEtZmFjZWJvb2siPjwvaT48c3Bhbj5GYWNlYm9vazwvc3Bhbj48L2E+LS0+DQoNCiAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvNHR3ZW50eS1jb25zdWx0aW5nLyIgdGFyZ2V0PSJfYmxhbmsiIGNsYXNzPSJyMTlfbGlua2VkaW4iIHRpdGxlPSJsaW5rZWRpbiI+PGkgY2xhc3M9ImZhIGZhLWxpbmtlZGluIj48L2k+PHNwYW4+TGlua2VkSW48L3NwYW4+PC9hPg0KICAgICAgICAgICAgICAgICAgICA8YSBocmVmPSJodHRwczovL3d3dy5mYWNlYm9vay5jb20vNHR3ZW50eWNvbnN1bHRpbmcvIiB0YXJnZXQ9Il9ibGFuayIgY2xhc3M9InIxOV9saW5rZWRpbiIgdGl0bGU9ImxpbmtlZGluIj48aSBjbGFzcz0iZmEgZmEtZmFjZWJvb2siPjwvaT48c3Bhbj5GYWNlYm9vazwvc3Bhbj48L2E+DQoNCgkJCQk8L2Rpdj4NCg0KCQkJPC9kaXY+DQoJCTwvZGl2Pg0KCTwvZGl2PgkJCQkJDQoJPGRpdiBpZD0icjE5X25hdmlnYXRpb24tY29udGFpbmVyIj4NCgkJPGRpdiBpZD0icjE5X25hdmlnYXRpb24tY29udGVudCIgY2xhc3M9ImNvbnRhaW5lci1mbHVpZCBjZiI+DQoJCQk8YSBpZD0icjE5X2xvZ28iIGhyZWY9Ii8iIHRpdGxlPSI0dHdlbnR5Ij48aW1nIHNyYz0iL21lZGlhLzR0d2VudHkvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IjR0d2VudHkiPjwvYT4NCgkJCTxuYXYgaWQ9InIxOV9uYXZpZ2F0aW9uIj4NCgkJCQk8dWw+PGxpPjxhIGhyZWY9Jy8nID5Ib21lPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy93aHktdXMnICBjbGFzcz0ndG9wbmF2LWFjdGl2ZSc+V0hZIFVTPzwvYT48L2xpPjxsaT48YSBocmVmPScvc3VibWl0LXJlc3VtZScgPkpvYiBTZWVrZXJzPC9hPjx1bD48bGk+PGEgaHJlZj0nL2FkdmFuY2Vkc2VhcmNoLmFzcHgnID5Kb2IgU2VhcmNoPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9zdWJtaXQtcmVzdW1lJyA+U3VibWl0IFJlc3VtZTwvYT48L2xpPjxsaT48YSBocmVmPScvbWVtYmVyL2NyZWF0ZWpvYmFsZXJ0LmFzcHgnID5Kb2IgQWxlcnRzPC9hPjwvbGk+PC91bD48L2xpPjxsaT48YSBocmVmPScvZW1wbG95ZXInID5FbXBsb3llcjwvYT48dWw+PGxpPjxhIGhyZWY9Jy9zdWJtaXQtdmFjYW5jeScgPlNVQk1JVCBWQUNBTkNZPC9hPjwvbGk+PC91bD48L2xpPjxsaT48YSBocmVmPScvY29udGFjdC11cycgPkNvbnRhY3QgPC9hPjwvbGk+PC91bD4gDQoJCQkJPGEgaHJlZj0iL3NpdGVtYXAuYXNweCIgaWQ9InIxOV9tb2JpbGUtbmF2aWdhdGlvbiI+PGkgY2xhc3M9ImZhIGZhLWJhcnMiPjwvaT48c3Bhbj5OYXZpZ2F0aW9uPC9zcGFuPjwvYT4NCgkJCTwvbmF2Pg0KCQkJPC9kaXY+DQoJCTwvZGl2PgkNCjwvaGVhZGVyPjwhLS0gI3IxOV9oZWFkZXItY29udGFpbmVyIC0tPg0KDQo8IS0tIGFkZCBkaXYgd2l0aCAncjE5X3NsaWRlcicgY2xhc3MgdG8gcm9vdCBlbGVtZW50IGlmIHRoaXMgd2lsbCBiZSBhIHNsaWRlciAtLT4NCjwhLS0gSWYgaXQncyBub3QgYSBzbGlkZXIgYW5kIHlvdSBkZWxldGUgdGhlIGltZyB0YWcsIC0tPg0KPCEtLSBteWpzIHdpbGwgYXR0ZW1wdCB0byB3cml0ZSBiYW5uZXIgaW1nIGF1dG9tYXRpY2FsbHkuICAtLT4NCjxkaXYgaWQ9InIxOV9pbm5lci1iYW5uZXItY29udGFpbmVyIiBjbGFzcz0icjE5X2Jhbm5lciAiPg0KDQoJPCEtLTxpbWcgc3JjPSIvbWVkaWEvNHR3ZW50eS9pbWFnZXMvYmFubmVycy9pbm5lci0xLmpwZyIgYWx0PSIgIj4tLT4NCg0KPC9kaXY+ZAIFDxYCHwAFgg08ZGl2IGlkPSdkeW5hbWljLXNpZGUtbGVmdC1jb250YWluZXInPjxzZWN0aW9uIGlkPSJyMTlfbGVmdC1uYXZpZ2F0aW9uIiBjbGFzcz0ibGlua3MtMiI+DQoJPHVsPjxsaT48YSBocmVmPScvd2h5LXVzJyA+V0hZIFVTPzwvYT48dWw+PGxpPjxhIGhyZWY9Jy9hY2NvdW50LWV4ZWN1dGl2ZScgPkFjY291bnQgRXhlY3V0aXZlPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9hY2NvdW50LW1hbmFnZXInID5BY2NvdW50IE1hbmFnZXI8L2E+PC9saT48bGk+PGEgaHJlZj0nL2J1c2luZXNzLWRldmVsb3BtZW50LW1hbmFnZXInID5CdXNpbmVzcyBEZXZlbG9wbWVudCBNYW5hZ2VyPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9jdXN0b21lci1zZXJ2aWNlLXJlY3J1aXRtZW50JyA+Q3VzdG9tZXIgU2VydmljZSBSZWNydWl0bWVudDwvYT48L2xpPjxsaT48YSBocmVmPScvY3VzdG9tZXItc2VydmljZS1yZXByZXNlbnRhdGl2ZScgPkN1c3RvbWVyIFNlcnZpY2UgUmVwcmVzZW50YXRpdmU8L2E+PC9saT48bGk+PGEgaHJlZj0nL2luc2lkZS1zYWxlcycgPkluc2lkZSBTYWxlczwvYT48L2xpPjxsaT48YSBocmVmPScvdGVhbS1sZWFkZXInID5UZWFtIExlYWRlcjwvYT48L2xpPjxsaT48YSBocmVmPScvdGVsZXNhbGVzJyA+VGVsZXNhbGVzPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9zYWxlcy1hc3Npc3RhbnQnID5TYWxlcyBBc3Npc3RhbnQ8L2E+PC9saT48bGk+PGEgaHJlZj0nL3NhbGVzLWV4ZWN1dGl2ZScgPlNhbGVzIEV4ZWN1dGl2ZTwvYT48L2xpPjxsaT48YSBocmVmPScvc2FsZXMtY29uc3VsdGFudCcgPlNhbGVzIENvbnN1bHRhbnQ8L2E+PC9saT48bGk+PGEgaHJlZj0nL3NhbGVzLXJlcHJlc2VudGF0aXZlJyA+U2FsZXMgUmVwcmVzZW50YXRpdmU8L2E+PC9saT48bGk+PGEgaHJlZj0nL3NhbGVzLW1hbmFnZXInID5TYWxlcyBNYW5hZ2VyPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy9zYWxlcy1kaXJlY3RvcicgPlNhbGVzIERpcmVjdG9yPC9hPjwvbGk+PGxpPjxhIGhyZWY9Jy90ZXJyaXRvcnktbWFuYWdlcicgPlRlcnJpdG9yeSBNYW5hZ2VyIDwvYT48L2xpPjwvdWw+PC9saT48L3VsPg0KPC9zZWN0aW9uPg0KPGRpdiBjbGFzcz0iY3VzdG9tLXdpZGdldC1ncm91cC1sZWZ0Ij4KPGRpdiBjbGFzcz0iY3VzdG9tLXdpZGdldCBjdXN0b20td2lkZ2V0LTEzNSBjdi1kcm9wb2ZmIj4KPGRpdiBpZD0iZm9vdGVyLWN2LWRyb3AiPg0KCTxkaXYgY2xhc3M9ImNvbnRhaW5lciB0ZXh0LWNlbnRlciI+DQoJCTxpbWcgYWx0PSIiIHNyYz0iLy9pbWFnZXMuanh0Lm5ldC5hdS80dHdlbnR5L2ltYWdlcy9yZXN1bWUtcHVycGxlLnBuZyIgLz4NCgkJPGgyPg0KCQkJQ1YgRHJvcCBPZmY8L2gyPg0KCQk8ZGl2IGNsYXNzPSJyb3ciPg0KCQkJPGRpdiBjbGFzcz0iY29sLWxnLTUgY29sLW1kLTYgY29sLXhzLTEyIGNvbC1jZW50ZXJlZCI+DQoJCQkJPGlmcmFtZSBoZWlnaHQ9IjI2MCIgaWQ9ImVucXVpcnlfaWZyYW1lIiBzcmM9Ii8vZi5qeHQuY29tLmF1L0ZPUk1TLzR0d2VudHkvY3ZfZHJvcF9vZmZfZXhwb3J0ZWQvY3ZfZHJvcF9vZmYucGhwIj5Zb3VyIGJyb3dzZXIgZG9lcyBub3Qgc3VwcG9ydCBpZnJhbWVzLjwvaWZyYW1lPjwvZGl2Pg0KCQk8L2Rpdj4NCgk8L2Rpdj4NCjwvZGl2Pg0KCjwvZGl2Pg0KCjwvZGl2PjwvZGl2PjwhLS1lbmQgb2Ygc2lkZS1sZWZ0LS0+ZAIJDxYCHwAFuhw8aDE+DQoJRWZmaWNpZW50IGFuZCBhY2N1cmF0ZSA8c3Bhbj50ZWxlc2FsZXM8L3NwYW4+IGFjcm9zcyBBdXN0cmFsaWE8L2gxPg0KPHA+DQoJVGFsZW50ZWQgdGVsZXNhbGVzIHN0YWZmIGtub3cgaG93IHRvIGNsb3NlIGEgZGVhbCBhbmQgYmVnaW4gYSBsb25nLWxhc3RpbmcgcmVsYXRpb25zaGlwIGJldHdlZW4geW91ciBidXNpbmVzcyBhbmQgaXRzIGN1c3RvbWVycy4gNFR3ZW50eSBpcyBoZXJlIHRvIGZ1bGZpbCBhbGwgb2YgeW91ciB0ZWxlc2FsZXMgc3RhZmZpbmcgbmVlZHMsIHdoZXRoZXIgaXQmcnNxdW87cyBmb3IgYW4gb2NjYXNpb25hbCB1cmdlbnQgdmFjYW5jeSBvbiBhIHRlbXAgYmFzaXMgb3IgdG8gbWV0aG9kaWNhbGx5IGZpbGwgeW91ciBmdWxsdGltZSByb2xlcyBhcyB2YWNhbmNpZXMgb3BlbiB1cC4gV2Uga25vdyB0aGUgc2FsZXMgc2VjdG9yIGluIGRlcHRoLCB3aXRoIGEgY2xlYXIgaWRlYSBvZiB3aGljaCBwZXJmb3JtYW5jZSBpbmRpY2F0b3JzIHJlYWxseSBtYXR0ZXIgdG8gYW4gZW1wbG95ZXIuIFdoZW4geW91IG5lZWQgc29tZW9uZSB0byBhcnJpdmUgYW5kIGxlYXJuIHF1aWNrbHksIGFkYXB0IHRvIGFuIGV2ZXItY2hhbmdpbmcgZW52aXJvbm1lbnQgYW5kIGNvbnNpc3RlbnRseSBkZWxpdmVyIG9uIHNhbGVzIHRhcmdldHMsIHdlIGtub3cgd2hlcmUgdG8gbG9jYXRlIHRoZW0uPC9wPg0KPGgzPg0KCUhvdyB3ZSBmaW5kIHRlbGVzYWxlcyBjYW5kaWRhdGVzIHRvIHN1aXQgeW91ciByb2xlczwvaDM+DQo8cD4NCglBdCA0VHdlbnR5IHdlIHVzZSBhIG51bWJlciBvZiBtZXRob2RzIHRvIGZpbmQgdGhlIGlkZWFsIGNhbmRpZGF0ZXMgZm9yIHlvdSBmYXN0ZXIuIE5vdCBvbmx5IGRvIHdlIGhvbGQgcmVndWxhciBzZW1pbmFycyBhbmQgd29yayB3aXRoIHRvcCB1bml2ZXJzaXRpZXMgdG8gYnVpbGQgdXAgYW4gZXh0ZW5zaXZlIG5ldHdvcmsgb2YgY2FuZGlkYXRlcyB0byBjaG9vc2UgZnJvbSwgd2UgYWxzbyBrbm93IGhvdyB0byBhZHZlcnRpc2UgZm9yIHRoZSBzcGVjaWZpYyBxdWFsaXRpZXMgeW91JnJzcXVvO3JlIGxvb2tpbmcgZm9yIGluIHlvdXIgbmV4dCBzYWxlcyBwcm9mZXNzaW9uYWwuIEZ1cnRoZXJtb3JlLCBlYWNoIHBlcnNvbiB3ZSBwdXQgZm9yd2FyZCBmb3IgeW91ciBjb25zaWRlcmF0aW9uIGhhcyBiZWVuIHRob3JvdWdobHkgcHJlLXZldHRlZCBzbyB5b3UmcnNxdW87bGwga25vdyB0aGF0IHRoZWlyIHBlcnNvbmFsaXR5IHR5cGUsIGJlaGF2aW91cmFsIHByb2ZpbGUgYW5kIHNhbGVzIGFiaWxpdGllcyB3aWxsIGJlIGEgcHJvZHVjdGl2ZSBtYXRjaCBmb3IgeW91ciB0ZWFtLiBXZSBzYXZlIHlvdSB3YXN0ZWQgdGltZSwgcmVzb3VyY2VzIGFuZCBmcnVzdHJhdGlvbiBieSBmaW5kaW5nIHRoZSByaWdodCBzdGFmZiwgdGhlIGZpcnN0IHRpbWUuPC9wPg0KPGgzPg0KCUNvbnRhY3QgdXMgdG9kYXkgdG8gZmluZCB0aGUgdGFsZW50IHlvdSBuZWVkPC9oMz4NCjxwPg0KCUlmIHlvdSZyc3F1bztyZSBpbiBuZWVkIG9mIHRlbXAsIHBhcnQgdGltZSBvciBmdWxsIHRpbWUgdGVsZXNhbGVzIHN0YWZmIHRvIGtlZXAgeW91ciB0ZWFtIHJ1bm5pbmcgYXQgZnVsbCBwb3dlciwgY29udGFjdCBvdXIgc3BlY2lhbGlzdCBzYWxlcyBjb25zdWx0YW50cyBhdCA0VHdlbnR5IENvbnN1bHRpbmcuIFdlIHJlY3J1aXQgZm9yIHBvc2l0aW9ucyB0aHJvdWdob3V0IEF1c3RyYWxpYSZyc3F1bztzIG1ldHJvIGFyZWFzIGluY2x1ZGluZyBTeWRuZXksIE1lbGJvdXJuZSwgQnJpc2JhbmUsIFBlcnRoLCBBZGVsYWlkZSBhbmQgYmV5b25kLCBhbmQgb3VyIHNlcnZpY2VzIGFyZSBhdmFpbGFibGUgb24gYW4gb2NjYXNpb25hbCBvciBvbmdvaW5nIGJhc2lzLiBSZWFjaCBvdXIgPHNwYW4+dGVsZXNhbGVzPC9zcGFuPiBjb25zdWx0YW50cyBub3cgdmlhIGVtYWlsIGF0IDxhIGhyZWY9Im1haWx0bzppbmZvQDR0d2VudHljb25zdWx0aW5nLmNvbSIgdGl0bGU9Ik1haWwgVXMiPmluZm9ANHR3ZW50eWNvbnN1bHRpbmcuY29tPC9hPiwgYW5kIGdldCB0aGF0IHN0YWZmaW5nIHByb2JsZW0gc29ydGVkIHNvb25lci48L3A+DQo8ZGl2IGNsYXNzPSJyb3cgbGlzdGluZyI+DQoJPGRpdiBjbGFzcz0iY29sLXhzLTYiPg0KCQk8dWw+DQoJCQk8bGk+DQoJCQkJPGEgaHJlZj0iL2FjY291bnQtZXhlY3V0aXZlIiB0aXRsZT0iQWNjb3VudCBFeGVjdXRpdmUiPkFjY291bnQgRXhlY3V0aXZlPC9hPjwvbGk+DQoJCQk8bGk+DQoJCQkJPGEgaHJlZj0iL2FjY291bnQtbWFuYWdlciIgdGl0bGU9IkFjY291bnQgTWFuYWdlciI+QWNjb3VudCBNYW5hZ2VyPC9hPjwvbGk+DQoJCQk8bGk+DQoJCQkJPGEgaHJlZj0iL2J1c2luZXNzLWRldmVsb3BtZW50LW1hbmFnZXIiIHRpdGxlPSJCdXNpbmVzcyBEZXZlbG9wbWVudCBNYW5hZ2VyIj5CdXNpbmVzcyBEZXZlbG9wbWVudCBNYW5hZ2VyPC9hPjwvbGk+DQoJCQk8bGk+DQoJCQkJPGEgaHJlZj0iL2N1c3RvbWVyLXNlcnZpY2UtcmVwcmVzZW50YXRpdmUiIHRpdGxlPSJDdXN0b21lciBTZXJ2aWNlIFJlcHJlc2VudGF0aXZlIj5DdXN0b21lciBTZXJ2aWNlIFJlcHJlc2VudGF0aXZlPC9hPjwvbGk+DQoJCQk8bGk+DQoJCQkJPGEgaHJlZj0iL2N1c3RvbWVyLXNlcnZpY2UtcmVjcnVpdG1lbnQiIHRpdGxlPSJDdXN0b21lciBTZXJ2aWNlIEpvYnMiPkN1c3RvbWVyIFNlcnZpY2UgSm9iczwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9pbnNpZGUtc2FsZXMiIHRpdGxlPSJJbnNpZGUgU2FsZXMiPkluc2lkZSBTYWxlczwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii90ZWFtLWxlYWRlciIgdGl0bGU9IlRlYW0gTGVhZGVyIj5UZWFtIExlYWRlcjwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii90ZWxlc2FsZXMiIHRpdGxlPSJUZWxlc2FsZXMiPlRlbGVzYWxlczwvYT48L2xpPg0KCQk8L3VsPg0KCTwvZGl2Pg0KCTxkaXYgY2xhc3M9ImNvbC14cy02Ij4NCgkJPHVsPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9zYWxlcy1hc3Npc3RhbnQiIHRpdGxlPSJTYWxlcyBBc3Npc3RhbnQiPlNhbGVzIEFzc2lzdGFudDwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9zYWxlcy1leGVjdXRpdmUiIHRpdGxlPSJTYWxlcyBFeGVjdXRpdmUiPlNhbGVzIEV4ZWN1dGl2ZTwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9zYWxlcy1jb25zdWx0YW50IiB0aXRsZT0iU2FsZXMgQ29uc3VsdGFudCI+U2FsZXMgQ29uc3VsdGFudDwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9zYWxlcy1yZXByZXNlbnRhdGl2ZSIgdGl0bGU9IlNhbGVzIFJlcHJlc2VudGF0aXZlIj5TYWxlcyBSZXByZXNlbnRhdGl2ZTwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9zYWxlcy1tYW5hZ2VyIiB0aXRsZT0iU2FsZXMgTWFuYWdlciI+U2FsZXMgTWFuYWdlcjwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii9zYWxlcy1kaXJlY3RvciIgdGl0bGU9IlNhbGVzIERpcmVjdG9yIj5TYWxlcyBEaXJlY3RvcjwvYT48L2xpPg0KCQkJPGxpPg0KCQkJCTxhIGhyZWY9Ii90ZXJyaXRvcnktbWFuYWdlciIgdGl0bGU9IlRlcnJpdG9yeSBNYW5hZ2VyIj5UZXJyaXRvcnkgTWFuYWdlcjwvYT48L2xpPg0KCQk8L3VsPg0KCTwvZGl2Pg0KPC9kaXY+DQpkAg0PZBYCAgEPFgIfAAW/Ejxmb290ZXIgaWQ9InIxOV9mb290ZXItY29udGFpbmVyIj4NCiAgICA8ZGl2IGlkPSJyMTlfZm9vdGVyLWNvbnRlbnQiIGNsYXNzPSJjb250YWluZXItZmx1aWQiPg0KICAgICAgICA8ZGl2IGlkPSJyMTlfZm9vdGVyLXN1bW1hcnkiPg0KICAgICAgICAgICAgPGEgaWQ9ImZvb3Rlcl9sb2dvIiBocmVmPSIvIiB0aXRsZT0iNHR3ZW50eSI+PGltZyBzcmM9Ii9tZWRpYS80dHdlbnR5L2ltYWdlcy9mb290ZXItbG9nby5wbmciIGFsdD0iNHR3ZW50eSI+PC9hPg0KICAgICAgICAgICAgPHA+NFR3ZW50eSB3YXMgZm91bmRlZCBvbiBhIHBhc3Npb24gZm9yIHNoYXBpbmcgZnV0dXJlcy48L3A+DQogICAgICAgICAgICA8ZGl2IGlkPSJyMTlfZm9vdGVyLXNvY2lhbC1tZWRpYSI+DQogICAgICAgICAgICAgICAgPCEtLTxoMz5HZXQgU29jaWFsPC9oMz4tLT4NCiAgICAgICAgICAgICAgICA8IS0tIGluc2VydGVkIHdpdGggamF2YXNjcmlwdCAtLT4NCiAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPGRpdiBpZD0icjE5X2Zvb3Rlci1tZW51IiBjbGFzcz0iaGlkZGVuLXhzIj4NCiAgICAgICAgICAgICA8dWw+PGxpPjxhIGhyZWY9Ii9qb2Itc2Vla2VycyIgdGl0bGU9IkpvYiBTZWVrZXJzIj5Kb2IgU2Vla2VyczwvYT4NCiAgICAgICAgICAgICA8dWw+PGxpPjxhIGhyZWY9Ii9hZHZhbmNlZHNlYXJjaC5hc3B4IiB0aXRsZT0iSm9iIFNlYXJjaCI+Sm9iIFNlYXJjaDwvYT48L2xpPg0KICAgICAgICAgICAgIDxsaT48YSBocmVmPSIvc3VibWl0LXJlc3VtZSIgdGl0bGU9IlN1Ym1pdCBSZXN1bWUiPlN1Ym1pdCBSZXN1bWU8L2E+PC9saT4NCiAgICAgICAgICAgICA8bGk+PGEgaHJlZj0iL21lbWJlci9jcmVhdGVqb2JhbGVydC5hc3B4IiB0aXRsZT0iSm9iIEFsZXJ0cyI+Sm9iIEFsZXJ0czwvYT48L2xpPjwvdWw+DQogICAgICAgICAgICAgPC9saT4NCiAgICAgICAgICAgICA8bGk+PGEgaHJlZj0iL2VtcGxveWVyIiB0aXRsZT0iRW1wbG95ZXIiPkVtcGxveWVyPC9hPjx1bD48bGk+PGEgaHJlZj0iL3N1Ym1pdC12YWNhbmN5IiB0aXRsZT0iU1VCTUlUIFZBQ0FOQ1kiPlNVQk1JVCBWQUNBTkNZPC9hPjwvbGk+PC91bD48L2xpPg0KICAgICAgICAgICAgIDxsaT48YSBocmVmPSIvY29udGFjdC11cyIgdGl0bGU9IkNvbnRhY3QgVXMiPkNvbnRhY3Q8L2E+DQogICAgICAgICAgICAgPHVsPjxsaT48YSBocmVmPSJtYWlsdG86SW5mb0A0dHdlbnR5Y29uc3VsdGluZy5jb20iIHRpdGxlPSJNYWlsIFVzIj5JbmZvQDR0d2VudHljb25zdWx0aW5nLmNvbTwvYT48L2xpPjxsaT48YSBocmVmPSJ0ZWw6MTMwMDkzNTQzMyIgdGFyZ2V0PSJfYmxhbmsiIHRpdGxlPSJQaG9uZSI+PGkgY2xhc3M9ImZhIGZhLXBob25lIj48L2k+IDxzcGFuPjEzMDAgOTM1IDQzMzwvc3Bhbj48L2E+PC9saT48L3VsPg0KICAgICAgICAgICAgIDwvbGk+DQogICAgICAgICAgICAgDQogICAgICAgICAgICAgPC91bD4NCg0KICAgICAgICA8L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8IS0tICNyMTlfZm9vdGVyLWNvbnRlbnQgLS0+DQo8L2Zvb3Rlcj4NCjwhLS0gI3IxOV9mb290ZXIgLS0+DQo8ZGl2IGlkPSJyMTlfYm90dG9tLWJhci1jb250YWluZXIiPg0KICAgIDxkaXYgaWQ9InIxOV9ib3R0b20tYmFyLWNvbnRlbnQiIGNsYXNzPSJjb250YWluZXItZmx1aWQiPg0KICAgICAgICA8ZGl2IGlkPSJyMTlfYm90dG9tLWJhci1jb3B5cmlnaHQiPg0KICAgICAgICAgICAgwqkgMjAxNyA0VHdlbnR5IENvbnN1bHRpbmcuIEFsbCByaWdodHMgcmVzZXJ2ZWQgfDxhIGhyZWY9Ii8vd3d3Lmp4dC5jb20uYXUiIHRhcmdldD0iX2JsYW5rIiB0aXRsZT0iSlhUIFBsYXRmb3JtICZuZGFzaDsgUmVjcnVpdGVyIFdlYnNpdGVzIj4gUmVjcnVpdGVyIFdlYnNpdGVzIGJ5IEpYVDwvYT4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIDxkaXYgaWQ9InIxOV9ib3R0b20tYmFyLW1lbnUiPg0KICAgICAgICAgICAgPGEgaHJlZj0iL3NpdGVtYXAuYXNweCIgdGl0bGU9IlNpdGVtYXAiPlNpdGVtYXA8L2E+DQogICAgICAgICAgICA8YSBocmVmPSIvdGVybXMtYW5kLWNvbmRpdGlvbnMiICB0aXRsZT0iVGVybXMgJmFtcDsgQ29uZGl0aW9ucyI+VGVybXMgJmFtcDsgQ29uZGl0aW9uczwvYT4NCiAgICAgICAgICAgIDxhIGhyZWY9Ii9wcml2YWN5LXBvbGljeSIgIHRpdGxlPSJQcml2YWN5IFBvbGljeSI+UHJpdmFjeSBQb2xpY3k8L2E+DQogICAgICAgICAgICA8YSBocmVmPSIvL3d3dy5qeHQuY29tLmF1IiB0YXJnZXQ9Il9ibGFuayIgdGl0bGU9IlBvd2VyZWQgYnkgSlhUIj5Qb3dlcmVkIGJ5IEpYVDwvYT4NCiAgICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQo8L2Rpdj4gICAgDQo8IS0tZW5kIG9mIGZvb3Rlci0tPmQCDw8WAh8AZWQCBQ8WAh8ABboGPHNjcmlwdD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAoZnVuY3Rpb24oaSxzLG8sZyxyLGEsbSl7aVsnR29vZ2xlQW5hbHl0aWNzT2JqZWN0J109cjtpW3JdPWlbcl18fGZ1bmN0aW9uKCkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7IChpW3JdLnE9aVtyXS5xfHxbXSkucHVzaChhcmd1bWVudHMpfQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICxpW3JdLmw9MSpuZXcgRGF0ZSgpO2E9cy5jcmVhdGVFbGVtZW50KG8pLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG09cy5nZXRFbGVtZW50c0J5VGFnTmFtZShvKVswXTthLmFzeW5jPTE7YS5zcmM9ZzttLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsbSkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9KSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJ2h0dHBzOi8vd3d3Lmdvb2dsZS1hbmFseXRpY3MuY29tL2FuYWx5dGljcy5qcycsJ2dhJyk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZ2EoJ2NyZWF0ZScsICdVQS0zOTYxMTc4Ny01JywgJ2F1dG8nKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBnYSgnc2VuZCcsICdwYWdldmlldycpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc2NyaXB0PmRkmiLgYPULN96Q9IZtPQX21UxLZKITgIAmN6EReRv2+SM=" />
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4131B5EF" />
+            <div id="wrapper" class="clearfix">
+                <div id="header">
+                    <div class="languages">
+                    </div>
+                    <a href="" id="skip-link">Skip to content</a>
+                    <header id="r19_header-container">
+                        <div id="r19_top-bar-container">
+                            <div id="r19_top-bar-content" class="container-fluid">
+                                <div id="r19_top-bar">
+                                    <div id="r19_login-register">
+                                        <a href="tel:1300935433" target="_blank" title="Phone"><i class="fa fa-phone"></i> <span>1300 935 433</span></a>
+                                    </div>
+                                    <div class="r19_social-media">
+                                        <!--
+					<a href="https://twitter.com/jxtconsulting" target="_blank" class="r19_twitter" title="twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+					<a href="https://instagram.com/jxtconsulting" target="_blank" class="r19_instagram" title="instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+					<a href="https://www.facebook.com/jxtconsulting" target="_blank" class="r19_facebook" title="facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>-->
+                                        <a href="https://www.linkedin.com/company/4twenty-consulting/" target="_blank" class="r19_linkedin" title="linkedin"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                                        <a href="https://www.facebook.com/4twentyconsulting/" target="_blank" class="r19_linkedin" title="linkedin"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="r19_navigation-container">
+                            <div id="r19_navigation-content" class="container-fluid cf">
+                                <a id="r19_logo" href="/" title="4twenty"><img src="/media/4twenty/images/logo.png" alt="4twenty"></a>
+                                <nav id="r19_navigation">
+                                    <ul>
+                                        <li><a href='/'>Home</a></li>
+                                        <li><a href='/why-us' class='topnav-active'>WHY US?</a></li>
+                                        <li><a href='/submit-resume'>Job Seekers</a>
+                                            <ul>
+                                                
+                                                <li><a href='/submit-resume'>Submit Resume</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a href='/employer'>Employer</a>
+                                            <ul>
+                                                <li><a href='/submit-vacancy'>SUBMIT VACANCY</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href='/contact-us'>Contact </a></li>
+                                    </ul>
+                                    <a href="/sitemap.aspx" id="r19_mobile-navigation"><i class="fa fa-bars"></i><span>Navigation</span></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- #r19_header-container -->
+                    <!-- add div with 'r19_slider' class to root element if this will be a slider -->
+                    <!-- If it's not a slider and you delete the img tag, -->
+                    <!-- myjs will attempt to write banner img automatically.  -->
+                    <div id="r19_inner-banner-container" class="r19_banner ">
+                        <!--<img src="/media/4twenty/images/banners/inner-1.jpg" alt=" ">-->
+                    </div>
+                </div>
+                <div id="dynamic-container">
+                    <div id='dynamic-side-left-container'>
+                        <section id="r19_left-navigation" class="links-2">
+                            <ul>
+                                <li><a href='/why-us'>WHY US?</a>
+                                    <ul>
+                                        <li><a href='/account-executive'>Account Executive</a></li>
+                                        <li><a href='/account-manager'>Account Manager</a></li>
+                                        <li><a href='/business-development-manager'>Business Development Manager</a></li>
+                                        <li><a href='/customer-service-recruitment'>Customer Service Recruitment</a></li>
+                                        <li><a href='/customer-service-representative'>Customer Service Representative</a></li>
+                                        <li><a href='/inside-sales'>Inside Sales</a></li>
+                                        <li><a href='/team-leader'>Team Leader</a></li>
+                                        <li><a href='/telesales'>Telesales</a></li>
+                                        <li><a href='/sales-assistant'>Sales Assistant</a></li>
+                                        <li><a href='/sales-executive'>Sales Executive</a></li>
+                                        <li><a href='/sales-consultant'>Sales Consultant</a></li>
+                                        <li><a href='/sales-representative'>Sales Representative</a></li>
+                                        <li><a href='/sales-manager'>Sales Manager</a></li>
+                                        <li><a href='/sales-director'>Sales Director</a></li>
+                                        <li><a href='/territory-manager'>Territory Manager </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+                        <div class="custom-widget-group-left">
+                            <div class="custom-widget custom-widget-135 cv-dropoff">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of side-left-->
+                    <div id="dynamic-content">
+                        <div class="dynamic-content-holder">
+                            <h1>
+	Efficient and accurate <span>telesales</span> across Australia</h1>
+                            <p>
+                                Talented telesales staff know how to close a deal and begin a long-lasting relationship between your business and its customers. 4Twenty is here to fulfil all of your telesales staffing needs, whether it&rsquo;s for an occasional urgent vacancy on a temp basis or to methodically fill your fulltime roles as vacancies open up. We know the sales sector in depth, with a clear idea of which performance indicators really matter to an employer. When you need someone to arrive and learn quickly, adapt to an ever-changing environment and consistently deliver on sales targets, we know where to locate them.</p>
+                            <h3>
+	How we find telesales candidates to suit your roles</h3>
+                            <p>
+                                At 4Twenty we use a number of methods to find the ideal candidates for you faster. Not only do we hold regular seminars and work with top universities to build up an extensive network of candidates to choose from, we also know how to advertise for the specific qualities you&rsquo;re looking for in your next sales professional. Furthermore, each person we put forward for your consideration has been thoroughly pre-vetted so you&rsquo;ll know that their personality type, behavioural profile and sales abilities will be a productive match for your team. We save you wasted time, resources and frustration by finding the right staff, the first time.</p>
+                            <h3>
+	Contact us today to find the talent you need</h3>
+                            <p>
+                                If you&rsquo;re in need of temp, part time or full time telesales staff to keep your team running at full power, contact our specialist sales consultants at 4Twenty Consulting. We recruit for positions throughout Australia&rsquo;s metro areas including Sydney, Melbourne, Brisbane, Perth, Adelaide and beyond, and our services are available on an occasional or ongoing basis. Reach our <span>telesales</span> consultants now via email at <a href="mailto:info@4twentyconsulting.com" title="Mail Us">info@4twentyconsulting.com</a>, and get that staffing problem sorted sooner.</p>
+                            <div class="row listing">
+                                <div class="col-xs-6">
+                                    <ul>
+                                        <li>
+                                            <a href="/account-executive" title="Account Executive">Account Executive</a></li>
+                                        <li>
+                                            <a href="/account-manager" title="Account Manager">Account Manager</a></li>
+                                        <li>
+                                            <a href="/business-development-manager" title="Business Development Manager">Business Development Manager</a></li>
+                                        <li>
+                                            <a href="/customer-service-representative" title="Customer Service Representative">Customer Service Representative</a></li>
+                                        <li>
+                                            <a href="/customer-service-recruitment" title="Customer Service Jobs">Customer Service Jobs</a></li>
+                                        <li>
+                                            <a href="/inside-sales" title="Inside Sales">Inside Sales</a></li>
+                                        <li>
+                                            <a href="/team-leader" title="Team Leader">Team Leader</a></li>
+                                        <li>
+                                            <a href="/telesales" title="Telesales">Telesales</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6">
+                                    <ul>
+                                        <li>
+                                            <a href="/sales-assistant" title="Sales Assistant">Sales Assistant</a></li>
+                                        <li>
+                                            <a href="/sales-executive" title="Sales Executive">Sales Executive</a></li>
+                                        <li>
+                                            <a href="/sales-consultant" title="Sales Consultant">Sales Consultant</a></li>
+                                        <li>
+                                            <a href="/sales-representative" title="Sales Representative">Sales Representative</a></li>
+                                        <li>
+                                            <a href="/sales-manager" title="Sales Manager">Sales Manager</a></li>
+                                        <li>
+                                            <a href="/sales-director" title="Sales Director">Sales Director</a></li>
+                                        <li>
+                                            <a href="/territory-manager" title="Territory Manager">Territory Manager</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                &nbsp;</p>
+                            <p>
+                                <strong>Let our consultants help you to find your next position.</strong></p>
+                            <p>
+                                <iframe height="520" id="fb_iframe" src="/media/site/forms/submit-resume.htm">Your browser does not support iframes.</iframe>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <footer id="r19_footer-container">
+                        <div id="r19_footer-content" class="container-fluid">
+                            <div id="r19_footer-summary">
+                                <a id="footer_logo" href="/" title="4twenty"><img src="/media/4twenty/images/footer-logo.png" alt="4twenty"></a>
+                                <p>4Twenty was founded on a passion for shaping futures.</p>
+                                <div id="r19_footer-social-media">
+                                    <!--<h3>Get Social</h3>-->
+                                    <!-- inserted with javascript -->
+                                </div>
+                            </div>
+                            <div id="r19_footer-menu" class="hidden-xs">
+                                <ul>
+                                    <li><a href="/job-seekers" title="Job Seekers">Job Seekers</a>
+                                        <ul>
+                                            
+                                            <li><a href="/submit-resume" title="Submit Resume">Submit Resume</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="/employer" title="Employer">Employer</a>
+                                        <ul>
+                                            <li><a href="/submit-vacancy" title="SUBMIT VACANCY">SUBMIT VACANCY</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contact-us" title="Contact Us">Contact</a>
+                                        <ul>
+                                            <li><a href="mailto:Info@4twentyconsulting.com" title="Mail Us">Info@4twentyconsulting.com</a></li>
+                                            <li><a href="tel:1300935433" target="_blank" title="Phone"><i class="fa fa-phone"></i> <span>1300 935 433</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- #r19_footer-content -->
+                    </footer>
+                    <!-- #r19_footer -->
+                    <div id="r19_bottom-bar-container">
+                        <div id="r19_bottom-bar-content" class="container-fluid">
+                            <div id="r19_bottom-bar-copyright">
+                               © 2017 4Twenty Consulting. All rights reserved |<a href="https://neap.co" target="_blank" title="Neap Platform – Recruiter Websites"> Recruiter Websites by Neap Pty Ltd</a>
+                            </div>
+                            <div id="r19_bottom-bar-menu">
+                                <a href="/sitemap.aspx" title="Sitemap">Sitemap</a>
+                                <a href="/terms-and-conditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+                                <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                                <a href="https://neap.co" target="_blank" title="Powered by Neap">Powered by Neap</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of footer-->
+                </div>
+            </div>
+            <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-39611787-5', 'auto');
+            ga('send', 'pageview');
+            </script>
+        </div>
+    </form>
+</body>
+
+</html>
